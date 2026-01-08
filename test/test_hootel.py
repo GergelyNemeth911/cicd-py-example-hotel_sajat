@@ -1,6 +1,7 @@
 import time
 from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
+#from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.edge.options import Options
 from selenium.webdriver.common.by import By
 import allure
 import pytest
@@ -11,7 +12,8 @@ class TestHootel(object):
         URL = 'http://hotel-v3.progmasters.hu/'
         options = Options()
         options.add_experimental_option("detach", True)
-        self.browser = webdriver.Chrome(options=options)
+        #self.browser = webdriver.Chrome(options=options)
+        self.browser = webdriver.Edge(options=options)
         self.browser.get(URL)
 
     def teardown_method(self):
