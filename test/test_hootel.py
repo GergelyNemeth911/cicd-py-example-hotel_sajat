@@ -16,8 +16,8 @@ class TestHootel(object):
         #self.browser = webdriver.Chrome(options=options)
         self.browser = webdriver.Edge(options=options)
         self.browser.get(URL)
-        self.browser.maximize_window()
-        print(self.browser.get_window_size())
+        #self.browser.maximize_window()
+        #print(self.browser.get_window_size())
         self.browser.set_window_size(1024, 768)
         self.browser.set_window_position(0,0)
 
